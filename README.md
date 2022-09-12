@@ -1,10 +1,10 @@
-# Title (replace with your title)
-
-Introductory paragraph (replace this with your text)
+# REGEX MATCHING AN EMAIL
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+A tutorial which explains the email matching regex for:
+
+/^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/
 
 ## Table of Contents
 

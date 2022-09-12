@@ -9,41 +9,67 @@ A tutorial which explains the email matching regex for:
 ## Table of Contents
 
 - [Anchors](#anchors)
-- [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
+
 - [Character Classes](#character-classes)
-- [Flags](#flags)
-- [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
+- [Grouping and Capturing](#grouping-and-capturing)
+
+- [Greedy](#greedy match)
+- [Quantifiers](#quantifiers)
+
+- [Other Regex Components]
+- [OR Operator](#or-operator)
+- [Lazy](#lazy match)
+- [Flags](#flags)
 - [Boundaries](#boundaries)
 - [Back-references](#back-references)
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
-## Regex Components
+## Components
 
-### Anchors
+- [Anchors](#anchors)
+  ^ asserts position at start of the string
+  $ asserts position at the end of the string, or before the line terminator right at the end of the string (if any)
 
-### Quantifiers
+- [Character Classes](#character-classes)
+- [Bracket Expressions](#bracket-expressions)
+- [Grouping and Capturing](#grouping-and-capturing)
+  1st Capturing Group and/or Character Class is
+  ([a-z0-9_\.-]+)
+  Matches a single character present from emails [a-z0-9_\.-]
 
-### OR Operator
+2nd Capturing Group and/or Character Class is ([\da-z\.-]+)
+Matches a single character present from emails [\da-z\.-]
 
-### Character Classes
+3rd Capturing Group and/or Character Class is ([a-z\.]{2,6})
+Matches a single character present from emails [a-z\.]
 
-### Flags
+- [Greedy](#greedy match)
+  From 1st Capturing Group
 
-### Grouping and Capturing
+* matches the previous token between one and unlimited times, as many times as possible, giving back as needed (greedy)
+  From 3rd Capturing Group
+  {2,6} matches the previous token between 2 and 6 times, as many times as possible, giving back as needed (greedy)
 
-### Bracket Expressions
+- [Quantifiers](#quantifiers)
 
-### Greedy and Lazy Match
+The "+" symbol is used at the end of 2nd capturing group as Quantifier
 
-### Boundaries
+a-z matches a single character in the range between a and z (case sensitive)
+0-9 matches a single character in the range between 0 and 9 (case sensitive)
+\d matches a digit (equivalent to [0-9])
+a-z matches a single character in the range between a and z case sensitive)
 
-### Back-references
+- [Other Regex Components]
+- [OR Operator](#or-operator)
+  Not used
+- [Lazy](#lazy match)
+  Not used
+- [Flags](#flags)
+  Not used
 
-### Look-ahead and Look-behind
+- [Boundaries](#boundaries)
+- [Back-references](#back-references)
+- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
-## Author
-
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Can be used but does not apply
